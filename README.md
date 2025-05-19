@@ -1,5 +1,7 @@
 # RebelSPRITE Image Resizer
 
+Try it out before you download it: https://snowmannn129.github.io/RebelSPRITE/
+
 ![RebelSPRITE Logo](assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_128x128.png)
 
 A powerful, browser-based image resizing tool for developers and designers.
