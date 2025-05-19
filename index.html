@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A powerful browser-based image resizing tool for developers and designers" />
+  <meta name="theme-color" content="#ff2e63" />
+  <title>RebelSPRITE</title>
+  <link rel="icon" href="assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_32x32.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_180x180.png" />
+  <script src="browser-check.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1><img src="assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_48x48.png" alt="RebelSPRITE Icon" class="header-icon"> RebelSPRITE</h1>
+      <div class="input-group">
+        <input type="text" id="filename" placeholder="Enter base name (e.g., sprite)" />
+        <button id="load-btn">Load Image</button>
+        <input type="file" id="file-input" accept="image/*" multiple hidden />
+        <button id="output-dir-btn">Choose Output Directory</button>
+        <button id="save-btn">Save Images</button>
+        <button id="settings-btn">Settings</button>
+        <button id="about-btn">About</button>
+      </div>
+    </header>
+
+    <main id="drop-area">
+      <p>Drag & Drop images here for <span class="highlight">rebel</span> resizing</p>
+      <div id="previews"></div>
+    </main>
+    <p id="directory-status" class="status-text"></p>
+
+    <div id="settings-modal" class="modal">
+      <div class="modal-content">
+        <span class="close settings-close">&times;</span>
+        <h2><img src="assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_32x32.png" alt="RebelSPRITE Icon" class="modal-icon"> Settings</h2>
+        <div class="settings-section">
+          <h3>Custom Sizes</h3>
+          <div class="custom-size-inputs">
+            <input type="number" id="custom-width" placeholder="Width" min="1" max="1024">
+            <span>x</span>
+            <input type="number" id="custom-height" placeholder="Height" min="1" max="1024">
+            <button id="add-size-btn">Add Size</button>
+          </div>
+          <div id="custom-sizes-list"></div>
+        </div>
+        
+        <div class="settings-section">
+          <h3>Presets</h3>
+          <div class="preset-buttons">
+            <button id="preset-favicon">Favicon Set</button>
+            <button id="preset-android">Android Icons</button>
+            <button id="preset-ios">iOS Icons</button>
+            <button id="preset-social">Social Media</button>
+          </div>
+        </div>
+        
+        <div class="settings-section">
+          <h3>Output Format</h3>
+          <select id="output-format">
+            <option value="png">PNG</option>
+            <option value="jpeg">JPEG</option>
+            <option value="webp">WebP</option>
+          </select>
+          <div id="quality-control" style="display:none;">
+            <label for="quality-slider">Quality: <span id="quality-value">90</span>%</label>
+            <input type="range" id="quality-slider" min="1" max="100" value="90">
+          </div>
+        </div>
+        
+        <div class="settings-section">
+          <h3>Additional Options</h3>
+          <div class="options-checkbox">
+            <input type="checkbox" id="maintain-aspect-ratio">
+            <label for="maintain-aspect-ratio">Maintain aspect ratio</label>
+          </div>
+          <div class="options-checkbox">
+            <input type="checkbox" id="apply-background">
+            <label for="apply-background">Apply background color</label>
+            <input type="color" id="background-color" value="#ffffff">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="about-modal" class="modal">
+      <div class="modal-content">
+        <span class="close about-close">&times;</span>
+        <h2><img src="assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_32x32.png" alt="RebelSPRITE Icon" class="modal-icon"> About RebelSPRITE</h2>
+        <p>This revolutionary tool resizes images into various sizes for development purposes. Built with pure JavaScript and Canvas API.</p>
+        <p>Features include:</p>
+        <ul>
+          <li>Batch image processing</li>
+          <li>Custom size definitions</li>
+          <li>Multiple output formats</li>
+          <li>Platform-specific icon presets</li>
+          <li>Quality and aspect ratio controls</li>
+        </ul>
+        <p>Contact: <a href="mailto:rebelsoftware@outlook.com">rebelsoftware@outlook.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Register service worker for PWA support
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch(error => {
+            console.log('ServiceWorker registration failed: ', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

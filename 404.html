@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found - RebelSPRITE</title>
+  <link rel="icon" href="assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_32x32.png" type="image/png">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 600px;
+    }
+    
+    h1 {
+      color: #ff2e63;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    p {
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    
+    .btn {
+      background-color: #ff2e63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      display: inline-block;
+      margin: 10px;
+    }
+    
+    .btn:hover {
+      background-color: #e2255a;
+    }
+    
+    .offline-message {
+      display: none;
+      padding: 10px;
+      background-color: #333;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>
+      <img src="assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_48x48.png" alt="RebelSPRITE Icon"> 
+      Page Not Found
+    </h1>
+    
+    <p>The page you're looking for doesn't exist or has been moved.</p>
+    
+    <div>
+      <a href="index.html" class="btn">Go to Home Page</a>
+      <button onclick="window.history.back()" class="btn">Go Back</button>
+    </div>
+    
+    <div id="offline-message" class="offline-message">
+      <p>You appear to be offline. Some features might not be available until you reconnect.</p>
+    </div>
+  </div>
+
+  <script>
+    // Check if user is offline
+    if (!navigator.onLine) {
+      document.getElementById('offline-message').style.display = 'block';
+    }
+    
+    // Listen for online/offline events
+    window.addEventListener('online', function() {
+      document.getElementById('offline-message').style.display = 'none';
+    });
+    
+    window.addEventListener('offline', function() {
+      document.getElementById('offline-message').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{
+  "name": "RebelSPRITE Image Resizer",
+  "short_name": "RebelSPRITE",
+  "description": "A powerful browser-based image resizing tool for developers and designers",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#ff2e63",
+  "icons": [
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_152x152.png",
+      "sizes": "152x152", 
+      "type": "image/png"
+    },
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_167x167.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/screenshot1.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "RebelSPRITE main interface"
+    }
+  ],
+  "categories": ["utilities", "developer", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "orientation": "any",
+  "prefer_related_applications": false
+}

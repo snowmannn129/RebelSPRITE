@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+#app {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: #ff2e63;
+  text-shadow: 0 0 5px rgba(255, 46, 99, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-icon, .modal-icon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#drop-area {
+  border: 2px dashed #666;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-image: url('assets/RebelSPRITE_Assetts/RebelSPRITE_Icon_96x96.png');
+  background-repeat: no-repeat;
+  background-position: center 80%;
+  background-size: 96px;
+  background-blend-mode: overlay;
+  background-color: rgba(26, 26, 46, 0.8);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button, input[type="text"] {
+  padding: 8px 12px;
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #3a4750;
+}
+
+#output-dir-btn {
+  background-color: #333;
+}
+
+#output-dir-btn.selected {
+  background-color: #08d9d6;
+}
+
+.status-text {
+  color: #aaa;
+  font-size: 0.9em;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+#previews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.preview-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview-item canvas {
+  border: 1px solid #555;
+  margin-bottom: 5px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #2c2c2c;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  max-width: 600px;
+  color: #ddd;
+  border-radius: 10px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal h2 {
+  display: flex;
+  align-items: center;
+}
+
+.close {
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Settings Styles */
+.settings-section {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px;
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+}
+
+.settings-section h3 {
+  margin-top: 0;
+  color: #bbb;
+}
+
+.custom-size-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.custom-size-inputs input[type="number"] {
+  width: 80px;
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+#custom-sizes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.custom-size-item {
+  background-color: #444;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remove-size {
+  background-color: #933;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.preset-buttons button {
+  flex: 1;
+  min-width: 120px;
+  background-color: #444;
+}
+
+.preset-buttons button:hover {
+  background-color: #3a4750;
+}
+
+.preset-buttons button:active {
+  background-color: #08d9d6;
+}
+
+#output-format {
+  padding: 8px;
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#quality-control {
+  margin-top: 15px;
+}
+
+#quality-slider {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.options-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #ff2e63;
+}
+
+input[type="color"] {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.highlight {
+  color: #ff2e63;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 3px rgba(255, 46, 99, 0.7);
+}

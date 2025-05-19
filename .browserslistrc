@@ -1,0 +1,19 @@
+# Browsers that RebelSPRITE supports
+
+# For modern features, we require these minimums
+last 2 Chrome versions
+last 2 Edge versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Opera versions
+
+# For general compatibility
+>= 1%
+not dead
+
+# Mobile Browsers
+last 2 iOS versions
+last 2 Android versions
+
+# Not supporting Internet Explorer at all
+not ie <= 11

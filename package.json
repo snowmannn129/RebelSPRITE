@@ -1,0 +1,42 @@
+{
+  "name": "rebelsprite",
+  "version": "1.0.0",
+  "description": "A powerful browser-based image resizing tool for developers and designers",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "node build/package.js"
+  },
+  "keywords": [
+    "image",
+    "resize",
+    "sprite",
+    "icon",
+    "batch",
+    "web"
+  ],
+  "author": "RebelSPRITE <rebelsoftware@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "archiver": "^5.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/rebelsprite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/rebelsprite/issues"
+  },
+  "homepage": "https://github.com/yourusername/rebelsprite",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "private": false
+}

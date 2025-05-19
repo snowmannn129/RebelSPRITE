@@ -1,0 +1,42 @@
+# Development directories and files
+.git/
+.github/
+.gitignore
+.npmrc
+.DS_Store
+*.log
+*.swp
+.idea/
+.vscode/
+
+# Test directories and files
+test/
+tests/
+__tests__/
+coverage/
+.nyc_output/
+
+# Build directories and files (only include dist in npm)
+build/
+assets/screenshots/
+*.md
+!README.md
+!LICENSE
+!CHANGELOG.md
+
+# Source control
+.git*
+
+# Configuration files
+.editorconfig
+.eslintrc
+.prettierrc
+.travis.yml
+.gitlab-ci.yml
+tsconfig.json
+webpack.config.js
+babel.config.js
+jest.config.js
+
+# Development dependencies
+node_modules/
