@@ -43,7 +43,7 @@ A powerful, browser-based image resizing tool for developers and designers.
 This application is built with pure JavaScript, HTML, and CSS, using the Canvas API for image manipulation.
 
 ```
-git clone https://github.com/yourusername/rebelsprite.git
+git clone https://github.com/snowmannn129/RebelSPRITE.git
 cd rebelsprite
 ```
 
