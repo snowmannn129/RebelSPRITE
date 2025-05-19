@@ -23,12 +23,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/rebelsprite.git"
+    "url": "https://github.com/snowmannn129/RebelSPRITE.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/rebelsprite/issues"
+    "url": "https://github.com/snowmannn129/RebelSPRITE/issues"
   },
-  "homepage": "https://github.com/yourusername/rebelsprite",
+  "homepage": "https://github.com/snowmannn129/RebelSPRITE",
   "engines": {
     "node": ">=14.0.0"
   },
