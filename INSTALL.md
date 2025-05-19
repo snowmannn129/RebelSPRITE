@@ -63,7 +63,7 @@ To build the application from source:
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/rebelsprite.git
+   git clone https://github.com/snowmannn129/RebelSPRITE.git
    cd rebelsprite
    ```
 
